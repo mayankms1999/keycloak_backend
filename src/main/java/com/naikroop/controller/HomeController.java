@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/home")
-@CrossOrigin(origins = "*")
+
 public class HomeController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public String home(){
+        System.out.println("home controller called");
         return "Welcome to Home";
     }
 }
