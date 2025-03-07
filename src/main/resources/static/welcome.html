@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px; /* Added space between sections */
+            margin-top: 20px;
+        }
+
+        .left-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .left-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 30px;
+        }
+
+        main {
+            flex: 1;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .right-form {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .right-form h2 {
+            text-align: center;
+        }
+
+        .right-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-form input, .right-form textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .right-form button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+       .right-menu a {
+            color: white;
+            text-decoration: none;
+       }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="left-menu">
+            <i class="fas fa-bars dropdown-icon"></i>
+        </div>
+        <div class="right-menu">
+            <a href="#">Home</a>
+            <a href="#">Business</a>
+            <a href="#">Services</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <aside class="left-icons">
+        <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+        <a href="https://mail.google.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </aside>
+
+    <main>
+        <h1>Welcome to Our Website</h1>
+    </main>
+
+    <aside class="right-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Number" required>
+            <textarea placeholder="Your Query" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </aside>
+</div>
+
+<footer>
+    <p>Contact us: support@example.com | Phone: +123 456 7890</p>
+</footer>
+
+</body>
+</html>

@@ -1,18 +1,25 @@
 package com.naikroop.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/home")
-
 public class HomeController {
 
     @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public String home(){
-        System.out.println("home controller called");
-        return "Welcome to Home";
+    public ResponseEntity<Resource> welcome() {
+        // Load the HTML file from the static folder
+        Resource resource = new ClassPathResource("static/welcome.html");
+
+        // Return the file with the correct content type
+        return ResponseEntity.ok()
+                .contentType(MediaType.TEXT_HTML)
+                .body(resource);
     }
 }
